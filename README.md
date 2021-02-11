@@ -1,0 +1,1 @@
+Project Base for integrating Node with AWS Lambda via OpenAPI's scaffolding capability.  

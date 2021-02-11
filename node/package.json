@@ -1,0 +1,18 @@
+{
+  "name": "com.walterp.nodeawsintegration",
+  "version": "1.0.0",
+  "description": "Just a basic integration of AWS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aws",
+    "node",
+    "lambda",
+    "openapi",
+    "swagger"
+  ],
+  "author": "Paul Walter",
+  "license": "ISC"
+}
