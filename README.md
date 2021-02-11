@@ -1,4 +1,6 @@
+# An API-First, NodeJS Template for use with Serverless Lambdas 
 Project Base for integrating Node with AWS Lambda via OpenAPI's scaffolding capability.  
 
-Install the following
-- To operate generate-api script: `npm install -g api-spec-converter`
+## Inspiration
+Using this article, which is about Java, to riff off of. Going to change it to use NodeJS
+- https://ordina-jworks.github.io/cloud/2019/10/02/API-first-development-with-OpenAPI-or-Swagger.html

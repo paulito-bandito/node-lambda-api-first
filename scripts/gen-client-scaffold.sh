@@ -10,5 +10,5 @@
 #
 #               npx @api-platform/client-generator https://demo.api-platform.com src/ --resource book
 
-#Delegate to the front end Project
-./docker/project-frontend/yarn gen-client $1
+#Delegate to the node Project
+./node/yarn gen-client $1
