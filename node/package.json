@@ -14,5 +14,8 @@
     "swagger"
   ],
   "author": "Paul Walter",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "yarn": "^1.22.10"
+  }
 }
