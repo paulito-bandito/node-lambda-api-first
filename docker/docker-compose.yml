@@ -1,0 +1,47 @@
+version: "3.1"
+services:
+  
+  # https://www.digitalocean.com/community/tutorials/containerizing-a-node-js-application-for-development-with-docker-compose
+
+  swagger-nginx:
+    build:
+      context: ./docker # look in the docker folder
+      dockerfile: nginx/nginx
+    container_name: project-swagger-nginx
+    ports:
+      - ${SWAGGER_NGINX_PORT}:80
+    
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: "swagger-editor"
+    ports:
+      - ${SWAGGER_EDITOR_PORT}:8080
+
+  # swagger-ui:
+  #   image: swaggerapi/swagger-ui
+  #   container_name: "swagger-ui"
+  #   ports:
+  #     - ${SWAGGER_UI_PORT}:8080
+  #   volumes:
+  #   #  - ./docker/swagger/api/project-openapi3.v1.yaml:/swagger.yaml
+  #      - ./docker/swagger/api/project-openapi3.v1.json:/swagger.json
+  #   environment:
+  #     SWAGGER_JSON: /swagger.json
+      
+  pgadmin:
+    build:
+      context: ./docker
+      dockerfile: pgadmin/pgadmin
+    container_name: pgadmin
+    #volumes:
+    #  - "./pgadmin/servers.json:/servers.json"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    depends_on:
+      - postgis
+    ports:
+      - ${PGADMIN_PORT}:80
+  
+volumes:
+  postgis_data:

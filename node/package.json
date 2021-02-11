@@ -16,6 +16,7 @@
   "author": "Paul Walter",
   "license": "ISC",
   "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.1.23",
     "api-spec-converter": "^2.12.0",
     "yarn": "^1.22.10"
   }

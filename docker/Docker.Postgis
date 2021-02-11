@@ -1,0 +1,4 @@
+FROM mdillon/postgis
+COPY ./postgis/project_postgres_1-ddl.sql docker-entrypoint-initdb.d/z_project_postgres_1-ddl.sql
+COPY ./postgis/project_postgres_2-base-data.sql /docker-entrypoint-initdb.d/z_project_postgres_2-base-data.sql
+COPY ./postgis/project_postgres_3-fake-data.sql /docker-entrypoint-initdb.d/z_project_postgres_3-fake-data.sql

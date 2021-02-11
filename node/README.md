@@ -12,3 +12,8 @@ In most online examples you will see NPM being very common, but this isn't optim
 - yarn install: installs all the dependencies defined in a package.json file.
 - yarn publish: publishes a package to a package manager.
 - yarn remove: removes an unused package from your current package.
+
+
+OpenApi Scaffolder info:
+- https://www.npmjs.com/package/@openapitools/openapi-generator-cli
+- After installing it, then run it one time: `npx @openapitools/openapi-generator-cli`  
